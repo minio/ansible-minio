@@ -22,7 +22,7 @@ PermissionsStartOnly=true
 EnvironmentFile={{ minio_server_envfile }}
 ExecStartPre=/bin/bash -c "[ -n \"${MINIO_ARGS}\" ] || echo \"Variable MINIO_ARGS not set in {{ minio_server_envfile }}\""
 
-ExecStart={{ minio_server_bin }} server $MINIO_OPTS
+ExecStart={{ minio_server_bin }} server $MINIO_OPTS $MINIO_ARGS
 
 # Let systemd always restart this service, in limits defined by StartLimitIntervalSec and StartLimitBurst.
 Restart=always
