@@ -37,7 +37,7 @@ minio_group: minio
 ```
 
 Name and group of the user running the minio server.
-**NB**: This role automatically creates the minio user and/or group if these does not exist in the system.
+**NB**: This role automatically creates the minio user and/or group if they do not exist in the system.
 
 ```yaml
 minio_server_envfile: /etc/default/minio
@@ -79,7 +79,7 @@ minio_server_datadirs:
   - '/minio-data'
 
 minio_server_args:
-  - 'https://server{1...3}/minio-data'
+  - 'https://server{1...4}/minio-data'
 ```
 
 Additional environment variables to be set in MinIO server environment
